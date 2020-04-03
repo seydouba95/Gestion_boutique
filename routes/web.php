@@ -14,7 +14,7 @@
 /**Route::get('/vente', function () {
     return view('venteProduit');
 });**/
-Route::get('/',"ProduitController@index");
+Route::get('/',['uses'=>'ProduitController@index','as'=>'home']);
 Route::get('/edit/{id}',"ProduitController@edit");
 Route::get('/show/{id}',"ProduitController@show");
 Route::get('/create',"ProduitController@create");

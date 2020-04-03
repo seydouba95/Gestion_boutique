@@ -46,9 +46,10 @@
                           <h5 class="card-title">Entrez les informations sur le nouveau produit</h5>
                           <form action="{{url('/store')}}" method="post">
                               @csrf
-                              <div class="form-group">
+                              <div class="form-group" {!! $errors->has('nom') ? 'has-error' : '' !!}>
                                   <label>Nom</label>
                                   <input  name="nom" type="text" class="form-control"  placeholder="Entrer le nom du produit">
+                                  {!! $errors->first('nom', '<small class="help-block">:message</small>') !!}
                               </div>
                               <div class="form-group">
                                   <label>Prix Unitaire</label>
