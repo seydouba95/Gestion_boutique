@@ -10,11 +10,14 @@ Modou a identifié deux problèmes majeurs sur son boutique.
 
 
 ## Installation
--Installation du composer 
--Installation de laravel avec composer global require laravel/installer
--
+
+*installation du  composer
+*installation de laravel avec composer global require laravel/installer
+
+
 
 ## Execution
+
 $ php artisan serve
 
 
