@@ -11,7 +11,8 @@ Modou a identifié deux problèmes majeurs sur son boutique.
 
 ## Installation
 
-*installation du  composer
+*installation du  composer.
+
 *installation de laravel avec composer global require laravel/installer
 
 
