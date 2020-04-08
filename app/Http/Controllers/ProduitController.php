@@ -16,7 +16,7 @@ class ProduitController extends Controller
     {
 
         $produits = Produit::all();
-        return view('produit',['produits'=>$produits,'layout'=>'index']);
+        return view('index',['produits'=>$produits,'layout'=>'index']);
     }
 
     /**
@@ -28,7 +28,7 @@ class ProduitController extends Controller
     {
 
         $produits = Produit::all();
-        return view('produit',['produits'=>$produits,'layout'=>'create']);
+        return view('index',['produits'=>$produits,'layout'=>'create']);
 
     }
 
@@ -62,7 +62,7 @@ class ProduitController extends Controller
         //montrer un produit par son id
         $produit = Produit::find($id);
         $produits = Produit::all();
-        return view('produit',['produits'=>$produits,'produit'=>$produit,'layout'=>'show']);
+        return view('index',['produits'=>$produits,'produit'=>$produit,'layout'=>'show']);
 
     }
 
@@ -77,7 +77,7 @@ class ProduitController extends Controller
 
         $produit = Produit::find($id);
         $produits = Produit::all();
-        return view('produit',['produits'=>$produits,'produit'=>$produit,'layout'=>'edit']);
+        return view('index',['produits'=>$produits,'produit'=>$produit,'layout'=>'edit']);
     }
 
     /**
