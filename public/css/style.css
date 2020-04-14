@@ -41,7 +41,7 @@ body {
 }
 .card {
     border : none !important;
-    border-bottom: 3px solid #00c9b7 !important;
+    border-bottom: 1px solid #00c9b7 !important;
 }
 input[type=text] {
 
