@@ -57,7 +57,9 @@ input[type=text]:focus{
 .table .thead-light th {
     color : #fff !important;
     background: #00c9b7 !important;
-    border: none !important;
+    padding: 5px;
+    margin: auto;
+
 }
 footer {
     height: 10px;
