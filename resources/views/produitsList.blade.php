@@ -1,5 +1,5 @@
 <div class="card mb-3">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUs4AMlgLKe0uNk0TnLbYYTBHk7kqvocu0mj1-j6Mqu7n5GyZR&usqp=CAU" class="card-img-top" alt="..." style="height: 300px">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUs4AMlgLKe0uNk0TnLbYYTBHk7kqvocu0mj1-j6Mqu7n5GyZR&usqp=CAU" class="card-img-top" alt="..." >
     <div class="card-body">
         <h5 class="card-title">Liste des produits</h5>
         <p class="card-text">
