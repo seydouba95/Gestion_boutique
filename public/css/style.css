@@ -10,9 +10,7 @@
     margin-right: 0px !important;
     margin-left: 0px !important;
 }
-.header-container > h2 {
 
-}
 .bg-light {
 
     background: #00c9b7 !important;
@@ -41,7 +39,7 @@ body {
 }
 .card {
     border : none !important;
-    border-bottom: 1px solid #00c9b7 !important;
+    border-bottom: 3px solid #00c9b7 !important;
 }
 input[type=text] {
 
@@ -55,9 +53,7 @@ input[type=text]:focus{
     border: none !important;
     box-shadow: 0px 4px 5px #ccc !important;
 }
-.thead-light {
 
-}
 .table .thead-light th {
     color : #fff !important;
     background: #00c9b7 !important;
@@ -68,4 +64,13 @@ footer {
     width: 100%;
     margin-top: 60px;
     background:#00c9b7 ;
+} 
+@media (min-width: 780px) {
+    font-size: 16px;
 }
+@media (min-width: 780px) {
+    .text {
+      font-size: 16px;
+    }
+  }
+
