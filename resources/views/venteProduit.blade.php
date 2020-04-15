@@ -10,32 +10,26 @@
 
             </div>
             <div class="modal-body">
-                <form action="" method="post">
+                
+
+            <form action="{{ url('Vente') }}" method="POST">
 
                     <div class="form-group">
-                        <label for="nom" class="col-form-label">Produit:</label>
-                        <input disabled VALUE="{{$produit->nom}}" type="text" class="form-control" id="nom">
-                    </div>
-                    <div class="form-group">
-                        <label for="prixVente" class="col-form-label">Prix de Vente:</label>
-                        <input disabled VALUE="{{$produit->prixVente}}" type="text" class="form-control" id="prixVente">
-                    </div>
-                    <div class="form-group">
-                        <label for="stock" class="col-form-label">Stock:</label>
-                        <input  disabled value="{{$produit->stock}}" type="text" class="form-control" id="stock">
-                    </div>
-                    <div class="form-group">
-                        <label for="quantite" class="col-form-label">Quantite:</label>
-                        <input   type="number"  min="1" class="form-control" id="quantite">
+                        <label class="col-form-label">Quantite:</label>
+                        <input  type="number" name="quantiteVendre"  id="quantiteVendre" min="1" class="form-control">
                     </div>
 
-                </form>
+              
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-primary">Acheter</button>
+                <button type="submit" class="btn btn-primary">Acheter</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
