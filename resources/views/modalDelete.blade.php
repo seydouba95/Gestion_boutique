@@ -1,12 +1,12 @@
-<a  type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete">Supprimer</a>
+<a  type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete{{$produit->id}}">Supprimer</a>
 
 
-<div class="modal  fade"   id="delete" tabindex="-1" role="dialog" aria-labelledby="MyModalLabel" aria-hidden="true">
+<div class="modal  fade"   id="delete{{$produit->id}}" tabindex="-1" role="dialog" aria-labelledby="MyModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
 
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-center" id="MyModalLabel">Confirmation Suppression</h5>
+                <h5 class="modal-title text-center" id="MyModalLabel{{$produit->id}}">Confirmation Suppression</h5>
 
 
             </div>
