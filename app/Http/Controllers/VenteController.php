@@ -11,7 +11,7 @@ class VenteController extends Controller
     
    public function vente($id)
    {
-  
+          
     $produit = Produit::find($id);
     if( $_POST['quantiteVendre'] <= $produit->stock) {
         
@@ -25,10 +25,7 @@ class VenteController extends Controller
     else
        echo "le nombre de produit en stock est insuffisant pour cette commande";
        
-    if($produit->stock == 0)
-    { $status = "disabled" ;
-        
-    } 
+  
      return redirect('/');
 }
 }

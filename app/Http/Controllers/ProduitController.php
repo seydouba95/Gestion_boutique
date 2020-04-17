@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Produit;
 use Illuminate\Http\Request;
+use App\Http\Requests\VenteRequest;
 
 class ProduitController extends Controller
 {
@@ -38,8 +39,8 @@ class ProduitController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(VenteRequest $request)
+    {   
         $produit = new Produit();
         $produit->nom = $request->input('nom');
         $produit->prixUnitaire = $request->input('prixUnitaire');
@@ -48,7 +49,11 @@ class ProduitController extends Controller
 
 
         $produit->save();
+        $validated = $request->validated();
+
+
         return redirect('/');
+        
     }
 
     /**

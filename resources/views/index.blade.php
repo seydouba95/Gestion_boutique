@@ -28,6 +28,8 @@
               <section class="col-md-7">
 
                   @include("produitsList")
+                 
+
               </section>
           </div>
 
@@ -35,11 +37,13 @@
 
 
       </div>
+     
 @elseif($layout== 'create')
       <div class="container-fluid mt-4">
           <div class="row">
               <section class="col-md-7">
                   @include("produitsList")
+                 
               </section>
               <section class="col">
 
@@ -48,22 +52,26 @@
                           <h5 class="card-title">Entrez les informations sur le nouveau produit</h5>
                           <form action="{{url('/store')}}" method="post">
                               @csrf
-                              <div class="form-group" {!! $errors->has('nom') ? 'has-error' : '' !!}>
+                              <div class="form-group {!! $errors->has('nom') ? 'is-invalid' : '' !!}">
                                   <label>Nom</label>
-                                  <input  name="nom" type="text" class="form-control"  placeholder="Entrer le nom du produit">
-                                  {!! $errors->first('nom', '<small class="help-block">:message</small>') !!}
+                                  <input  name="nom" type="text" class="form-control"  placeholder="Entrer le nom du produit" value="{{ old('nom') }}">
+                                  {!! $errors->first('nom', '<small  style = "color: red "  class="help-block">:message</small>') !!}
+                              
                               </div>
-                              <div class="form-group">
+                              <div  class="form-group {!! $errors->has('prixUnitaire') ? 'is-invalid' : '' !!}">
                                   <label>Prix Unitaire</label>
-                                  <input name="prixUnitaire" type="text" class="form-control"  placeholder="Entrer le prix  unitaire du produit">
+                                  <input value="{{ old('prixUnitaire') }}"name="prixUnitaire" type="text" class="form-control"  placeholder="Entrer le prix  unitaire du produit">
+                                  {!! $errors->first('prixUnitaire', '<small  style = "color: red " class="help-block">:message</small>') !!}
                               </div>
-                              <div class="form-group">
+                              <div  class="form-group {!! $errors->has('prixVente') ? 'is-invalid' : ''  !!}">
                                   <label>Prix de vente</label>
-                                  <input name="prixVente" type="text" class="form-control"  placeholder="Entrer le prix de vente  du produit">
+                                  <input value="{{ old('prixVente') }}" name="prixVente" type="text" class="form-control"  placeholder="Entrer le prix de vente  du produit">
+                                  {!! $errors->first('prixVente', '<small style = "color: red " class="help-block">:message</small>') !!}
                               </div>
-                              <div class="form-group">
+                              <div  class="form-group {!! $errors->has('stock') ? 'is-invalid' : '' !!}">
                                   <label>Stock</label>
-                                  <input name="stock" type="text" class="form-control"  placeholder="Entrer le stock du produit">
+                                  <input  name="stock" type="text" class="form-control"  placeholder="Entrer le stock du produit" value="{{ old('stock') }}">
+                                  {!! $errors->first('stock', '<small style = "color: red " class="help-block">:message</small>') !!}
                               </div>
                               <input type="submit" class="btn btn-info" value="Enregistrer">
                               <input type="reset" class="btn btn-danger" value="Effacer">
@@ -151,7 +159,7 @@
                               <input value="{{$produit->stock}}" name="stock" type="text" class="form-control"  placeholder="Entrer le stock du produit">
                           </div>
                           <input type="submit" class="btn btn-info" value="Editer">
-                          <input type="reset" class="btn btn-danger" value="Effacer">
+                          <a  href="{{url('/')}}" class="btn  btn-info">Retour</a> 
 
 
                       </form>

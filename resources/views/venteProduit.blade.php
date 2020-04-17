@@ -1,5 +1,5 @@
 
-<a  type="button" disabled="'.$status.'" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal{{$produit->id}}">Vendre</a>
+<a  type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal{{$produit->id}}">Vendre</a>
 <?PHP 
 $produit = App\Produit::find($produit->id);
 if ($produit->stock == 0) { $status = "enabled" ; } else { $status = "disabled" ;}
@@ -10,7 +10,7 @@ if ($produit->stock == 0) { $status = "enabled" ; } else { $status = "disabled" 
 
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModal{{$produit->id}}">Vente {{$produit->nom}} </h5>
+                <h5 class="modal-title" id="exampleModal{{$produit->id}}">Vente <strong>{{$produit->nom}} </strong></h5>
 
             </div>
             <div class="modal-body">
@@ -21,7 +21,7 @@ if ($produit->stock == 0) { $status = "enabled" ; } else { $status = "disabled" 
                                @csrf
                                <div class="form-group">
                         <label class="col-form-label">Quantité en stock :</label>
-                        <input disabled value={{$produit->stock}}  type="text" name="stock"  id="stock"  class="form-control">
+                        <input disabled value="{{$produit->stock}}"  type="text" name="stock"  id="stock"  class="form-control">
                     </div>
                     <div class="form-group">
                         <label class="col-form-label">Quantité à vendre:</label>
