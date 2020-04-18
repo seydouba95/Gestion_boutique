@@ -16,7 +16,7 @@ class ProduitController extends Controller
     public function index()
     {
 
-        $produits = Produit::all();
+        $produits = Produit::where('stock','>',0)->get();
         return view('index',['produits'=>$produits,'layout'=>'index']);
     }
 
@@ -28,7 +28,7 @@ class ProduitController extends Controller
     public function create()
     {
 
-        $produits = Produit::all();
+        $produits = Produit::where('stock','<>' ,0);
         return view('index',['produits'=>$produits,'layout'=>'create']);
 
     }
@@ -40,17 +40,20 @@ class ProduitController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(VenteRequest $request)
-    {   
+    {      
+
         $produit = new Produit();
         $produit->nom = $request->input('nom');
         $produit->prixUnitaire = $request->input('prixUnitaire');
         $produit->prixVente = $request->input('prixVente');
         $produit->stock = $request->input('stock');
 
-
+      
         $produit->save();
-        $validated = $request->validated();
-
+      
+       
+        
+      
 
         return redirect('/');
         
@@ -100,8 +103,8 @@ class ProduitController extends Controller
         $produit->prixVente = $request->input('prixVente');
         $produit->stock = $request->input('stock');
         $produit->save();
-        return redirect('/');
-
+        return redirect()->back();
+      
     }
 
     /**
@@ -114,7 +117,8 @@ class ProduitController extends Controller
     {
         $produit = Produit::find($id);
         $produit->delete();
-        return redirect('/');
+
+        return redirect()->back();
 
     }
 }

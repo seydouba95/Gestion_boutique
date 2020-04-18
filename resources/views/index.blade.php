@@ -54,13 +54,13 @@
                               @csrf
                               <div class="form-group {!! $errors->has('nom') ? 'is-invalid' : '' !!}">
                                   <label>Nom</label>
-                                  <input  name="nom" type="text" class="form-control"  placeholder="Entrer le nom du produit" value="{{ old('nom') }}">
+                                  <input  name="nom" id="nom" type="text" class="form-control"  placeholder="Entrer le nom du produit" value="{{ old('nom') }}">
                                   {!! $errors->first('nom', '<small  style = "color: red "  class="help-block">:message</small>') !!}
                               
                               </div>
                               <div  class="form-group {!! $errors->has('prixUnitaire') ? 'is-invalid' : '' !!}">
                                   <label>Prix Unitaire</label>
-                                  <input value="{{ old('prixUnitaire') }}"name="prixUnitaire" type="text" class="form-control"  placeholder="Entrer le prix  unitaire du produit">
+                                  <input value="{{ old('prixUnitaire') }}"name="prixUnitaire" type="text"  class="form-control"  placeholder="Entrer le prix  unitaire du produit">
                                   {!! $errors->first('prixUnitaire', '<small  style = "color: red " class="help-block">:message</small>') !!}
                               </div>
                               <div  class="form-group {!! $errors->has('prixVente') ? 'is-invalid' : ''  !!}">
@@ -73,7 +73,10 @@
                                   <input  name="stock" type="text" class="form-control"  placeholder="Entrer le stock du produit" value="{{ old('stock') }}">
                                   {!! $errors->first('stock', '<small style = "color: red " class="help-block">:message</small>') !!}
                               </div>
-                              <input type="submit" class="btn btn-info" value="Enregistrer">
+
+                              <input type="submit" name="op" class="btn btn-info" value="Enregistrer">
+
+
                               <input type="reset" class="btn btn-danger" value="Effacer">
 
 
