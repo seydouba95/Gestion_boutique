@@ -7,7 +7,7 @@
         <p class="card-text">
             Vous pouvez trouver ici tous les informations  sur tous nos produits en stock
         </p>
-      
+        @include("messages")
         <table class="table">
             <thead class="thead-light">
             <tr>

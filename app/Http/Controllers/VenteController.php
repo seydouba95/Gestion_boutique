@@ -7,25 +7,28 @@ use App\Produit;
 use App\Vente;
 
 class VenteController extends Controller
-{
-    
+{ 
+       
    public function vente($id)
    {
-          
+      
+   
     $produit = Produit::find($id);
     if( $_POST['quantiteVendre'] <= $produit->stock) {
         
-      $res= "Achat effectuee";
+     
       $stock = $produit->stock = ($produit->stock) - ($_POST['quantiteVendre']) ;
-        echo $res . " ";
-        echo ("le reste est : " . " " .$produit->stock);
+
         Produit::where('id',$id)->update(['stock'=> $stock]);
+        return redirect('/')->with('success',  $_POST['quantiteVendre'] . " " .  'Produits ' .$produit->nom . " " .'vendus' . " " . 'avec succès');      
+
     } 
     
     else
-       echo "le nombre de produit en stock est insuffisant pour cette commande";
+    return redirect('/')->with('success',' ce  stock du Produit ' .$produit->nom . " " .'n\'est pas disponible ' . " ");      
+
        
   
-     return redirect('/');
-}
+   }
+  
 }

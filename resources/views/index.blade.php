@@ -29,6 +29,7 @@
 
                   @include("produitsList")
                  
+                 
 
               </section>
           </div>
@@ -74,7 +75,7 @@
                                   {!! $errors->first('stock', '<small style = "color: red " class="help-block">:message</small>') !!}
                               </div>
 
-                              <input type="submit" name="op" class="btn btn-info" value="Enregistrer">
+                              <input type="submit" class="btn btn-info" value="Enregistrer">
 
 
                               <input type="reset" class="btn btn-danger" value="Effacer">

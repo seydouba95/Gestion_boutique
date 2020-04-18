@@ -28,7 +28,7 @@ class ProduitController extends Controller
     public function create()
     {
 
-        $produits = Produit::where('stock','<>' ,0);
+        $produits = Produit::where('stock','>',0)->get();
         return view('index',['produits'=>$produits,'layout'=>'create']);
 
     }
@@ -55,8 +55,7 @@ class ProduitController extends Controller
         
       
 
-        return redirect('/');
-        
+        return redirect('/')->with('success','Produit ajouté avec succès');        
     }
 
     /**
@@ -84,7 +83,7 @@ class ProduitController extends Controller
     {
 
         $produit = Produit::find($id);
-        $produits = Produit::all();
+        $produits = Produit::where('stock','>',0)->get();
         return view('index',['produits'=>$produits,'produit'=>$produit,'layout'=>'edit']);
     }
 
@@ -103,8 +102,7 @@ class ProduitController extends Controller
         $produit->prixVente = $request->input('prixVente');
         $produit->stock = $request->input('stock');
         $produit->save();
-        return redirect()->back();
-      
+        return redirect('/')->with('success','Produit ID:' .$produit->id . " " .'modifié ' . " " .'avec succès');      
     }
 
     /**
@@ -118,7 +116,7 @@ class ProduitController extends Controller
         $produit = Produit::find($id);
         $produit->delete();
 
-        return redirect()->back();
+        return redirect('/')->with('success','Produit ID:' .$produit->id . " " .'supprimé' . " " .'avec succès');      
 
     }
 }
