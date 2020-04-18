@@ -8,10 +8,20 @@ use App\Http\Requests\VenteRequest;
 
 class ProduitController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index1()
+    {
+        return view('home');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     *  @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {

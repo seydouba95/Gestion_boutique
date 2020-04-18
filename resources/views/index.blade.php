@@ -26,7 +26,7 @@
           <div class="container-fluid mt-4">
           <div class="row justify-content-center">
               <section class="col-md-7">
-
+                
                   @include("produitsList")
                  
                  

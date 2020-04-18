@@ -15,7 +15,8 @@
     return view('venteProduit');
 });**/
 Auth::routes();
-Route::get('/',['uses'=>'ProduitController@index','as'=>'home']);
+Route::get('/index', 'ProduitController@index')->name('index1');
+Route::get('/',"ProduitController@index");
 Route::get('/edit/{id}',"ProduitController@edit");
 Route::get('/show/{id}',"ProduitController@show");
 Route::get('/create',"ProduitController@create");
