@@ -7,7 +7,7 @@
         <br><br>
             <div class="card">
           
-                <div class="navbar navbar-expand-lg navbar-light bg-light">{{ __('Register') }}</div>
+                <div  class="navbar navbar-expand-lg navbar-light bg-primary text-white">  {{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

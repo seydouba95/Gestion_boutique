@@ -26,10 +26,15 @@
 <body style = "background-image: url('https://previews.123rf.com/images/alphaspirit/alphaspirit1701/alphaspirit170100077/70537968-syst%C3%A8me-num%C3%A9rique-binaire.jpg')">
 
     <div id="app">
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <div class="container">
-             
+            <div class="row header-container justify-content-center">
+    <div style="text-decoration: none;color:white" class="header mr-auto">
+        <h1 >Authentification Foutanke Shop</h1>
+    </div>
+
+</div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,11 +47,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('login') }}" >{{ __('Login') }} </a>
+                                <a  style=" font-size: 18px !important;" class="nav-link text-white" href="{{ route('login') }}" >{{ __('Login') }} </a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a style=" font-size: 18px !important;" class="nav-item nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else

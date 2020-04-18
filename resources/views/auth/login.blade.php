@@ -8,7 +8,7 @@
         <br><br>
             <div class="card">
             
-                <div class="navbar navbar-expand-lg navbar-light bg-light">{{ __('Login') }}</div>
+                <div class="navbar navbar-expand-lg navbar-light bg-primary text-white">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
