@@ -1,4 +1,4 @@
-<a  type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete{{$produit->id}}">Supprimer</a>
+<a  type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete{{$produit->id}}">Delete</a>
 
 
 <div class="modal  modal-fade"   id="delete{{$produit->id}}" tabindex="-1" role="dialog" aria-labelledby="MyModalLabel" aria-hidden="true">
