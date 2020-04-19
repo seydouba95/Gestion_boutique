@@ -27,7 +27,7 @@
     <div id="app">
     
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <a class="navbar-brand" href="{{url('/')}}">Foutanke Shop Authentication</a>
+    <a class="navbar-brand" href="{{url('/')}}">Foutanke Shop Authentification</a>
             <div class="container">
              
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
