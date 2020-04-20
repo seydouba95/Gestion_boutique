@@ -38,6 +38,24 @@
 
 
       </div>
+      @elseif($layout== 'produitSelected')
+      <div class="container-fluid mt-4">
+          <div class="container-fluid mt-4">
+          <div class="row justify-content-center">
+              <section class="col-md-7">
+                
+                  @include("rapportVente")
+                 
+                 
+
+              </section>
+          </div>
+
+          </div>
+
+
+      </div>
+      
      
 @elseif($layout== 'create')
       <div class="container-fluid mt-4">
@@ -177,6 +195,8 @@
 
       </div>
       @endif
+   
+ 
 <footer>
 
 </footer>

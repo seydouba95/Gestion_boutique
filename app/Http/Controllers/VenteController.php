@@ -8,7 +8,8 @@ use App\Vente;
 
 class VenteController extends Controller
 { 
-       
+     
+ 
    public function vente($id)
    {
       
@@ -18,8 +19,10 @@ class VenteController extends Controller
         
      
       $stock = $produit->stock = ($produit->stock) - ($_POST['quantiteVendre']) ;
+      $isSlected = $produit->isSelected = true;
+      $quantiteVendre = $_POST['quantiteVendre'];
 
-        Produit::where('id',$id)->update(['stock'=> $stock]);
+        Produit::where('id',$id)->update(['stock'=> $stock,'isSelected'=>$isSlected,'quantiteVendre'=>$quantiteVendre]);
         
         if($_POST['quantiteVendre'] >1 )
         return redirect('/')->with('success',  $_POST['quantiteVendre'] . " " .  'Produits ' .$produit->nom . " " .'vendus' . " " . 'avec succès');      

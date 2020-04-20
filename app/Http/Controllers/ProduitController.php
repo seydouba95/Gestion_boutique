@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Produit;
 use Illuminate\Http\Request;
 use App\Http\Requests\VenteRequest;
+use App\Vente;
 
 class ProduitController extends Controller
 {
@@ -16,6 +17,16 @@ class ProduitController extends Controller
     public function index1()
     {
         return view('home');
+    }
+       /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     *  @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function produitSelected(){
+        $produits = Produit::where('isSelected','=',true)->get();
+        return view('index',['produits'=>$produits,'layout'=>'produitSelected']);
     }
     /**
      * Display a listing of the resource.

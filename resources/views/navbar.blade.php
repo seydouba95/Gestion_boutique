@@ -17,6 +17,12 @@
 
 
             </li>
+            <li class="nav-item active">
+
+<a class="nav-link" href="{{url('/produitSelected')}}">Rapport Vente </a>
+
+
+</li>
 
 
         </ul>

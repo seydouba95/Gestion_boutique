@@ -19,6 +19,8 @@ class CreateProduitsTable extends Migration
             $table->bigInteger('prixUnitaire');
             $table->bigInteger('prixVente');
             $table->integer('stock');
+            $table->boolean('isSelected')->default(false);
+            $table->integer('quantiteVendre')->nullable();
 
             $table->timestamps();
         });
