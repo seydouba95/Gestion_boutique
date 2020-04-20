@@ -11,12 +11,15 @@
         <table class="table">
             <thead class="thead-light">
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Prix Vente</th>
+                <th scope="col">ID Du Produit</th>
+                <th scope="col">Nom Du Produit</th>
+                <th scope="col">Prix Unitaire</th>
+                <th scope="col">Prix De Vente</th>
                 <th scope="col">Quantité Vendu</th>
                 <th scope="col">Stock restant</th>
-                <th scope="col">Bénéfices</th>
+                <th scope="col">Total De  vente</th>
+                <th scope="col">Chiffre d'affaires</th>
+
 
              
 
@@ -29,10 +32,12 @@
 
                     <td>{{$produit->id}}</td>
                     <td>{{$produit->nom}}</td>
+                    <td>{{$produit->prixUnitaire}} Fcfa</td>
                     <td>{{$produit->prixVente}} Fcfa</td>
                     <td>{{$produit->quantiteVendre}}</td>
                     <td>{{$produit->stock}}</td>
                     <td>{{$produit->quantiteVendre * $produit->prixVente}} Fcfa</td>
+                    <td>{{$produit->prixUnitaire - $produit->prixVente}} Fcfa</td>
                  
                   
 
