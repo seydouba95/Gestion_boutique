@@ -15,6 +15,7 @@
                 <th scope="col">Nom</th>
                 <th scope="col">Prix Vente</th>
                 <th scope="col">Quantité Vendu</th>
+                <th scope="col">Stock restant</th>
                 <th scope="col">Bénéfices</th>
 
              
@@ -30,6 +31,7 @@
                     <td>{{$produit->nom}}</td>
                     <td>{{$produit->prixVente}} Fcfa</td>
                     <td>{{$produit->quantiteVendre}}</td>
+                    <td>{{$produit->stock}}</td>
                     <td>{{$produit->quantiteVendre * $produit->prixVente}} Fcfa</td>
                  
                   
