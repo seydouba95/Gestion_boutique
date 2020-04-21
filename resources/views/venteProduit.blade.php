@@ -1,5 +1,5 @@
 
-<a type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal{{$produit->id}}">Vendre</a>
+<a type="button" class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#exampleModal{{$produit->id}}">Vendre</a>
 
 
 <div class="modal fade" id="exampleModal{{$produit->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
