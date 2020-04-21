@@ -9,7 +9,7 @@
         </p>
         @include("messages")
         <div class="table-responsive">
-        </div>
+
         <table class="table">
             <thead class="thead-light">
             <tr>
@@ -47,6 +47,8 @@
             </tbody>
         </table>
 
+        </div>
+      
     </div>
 </div>
 

@@ -7,7 +7,8 @@
         <p class="card-text">
             Vous pouvez trouver ici tous les informations  sur tous nos produits vendus
         </p>
-        <div class="table-responsive"></div>
+        <div class="table-responsive">
+        
         <table class="table">
             <thead class="thead-light">
             <tr>
@@ -47,6 +48,10 @@
             </tbody>
         </table>
 
+        
+        
+        </div>
+      
     </div>
 </div>
 
