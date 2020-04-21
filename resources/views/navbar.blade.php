@@ -13,16 +13,20 @@
             </li>
             <li class="nav-item active">
 
+               @can('isAdmin')
                 <a class="nav-link" href="{{url('/create')}}">Create</a>
 
 
             </li>
+            @endcan
+            @can('isAdmin')
             <li class="nav-item active">
 
-<a class="nav-link" href="{{url('/produitSelected')}}">Rapport Vente </a>
+            <a class="nav-link" href="{{url('/produitSelected')}}">Rapport Vente </a>
 
 
 </li>
+@endcan
 
 
         </ul>
