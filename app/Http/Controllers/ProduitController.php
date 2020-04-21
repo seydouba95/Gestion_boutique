@@ -6,7 +6,7 @@ use App\Produit;
 use Illuminate\Http\Request;
 use App\Http\Requests\VenteRequest;
 use App\Vente;
-
+use  Gate;
 class ProduitController extends Controller
 {
     public function __construct()
@@ -48,7 +48,9 @@ class ProduitController extends Controller
      */
     public function create()
     {
-
+           if(!Gate::allows('isAdmin')){
+               abort(404,"Autorisation interdite");
+           }
         $produits = Produit::where('stock','>',0)->get();
         return view('index',['produits'=>$produits,'layout'=>'create']);
 
@@ -87,6 +89,9 @@ class ProduitController extends Controller
      */
     public function show($id)
     {
+        if(!Gate::allows('isAdmin')){
+            abort(404,"Autorisation interdite");
+        }
         //montrer un produit par son id
         $produit = Produit::find($id);
         $produits = Produit::all();
@@ -102,7 +107,9 @@ class ProduitController extends Controller
      */
     public function edit($id)
     {
-
+        if(!Gate::allows('isAdmin')){
+            abort(404,"Autorisation interdite");
+        }
         $produit = Produit::find($id);
         $produits = Produit::where('stock','>',0)->get();
         return view('index',['produits'=>$produits,'produit'=>$produit,'layout'=>'edit']);
@@ -117,6 +124,9 @@ class ProduitController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if(!Gate::allows('isAdmin')){
+            abort(404,"Autorisation interdite");
+        }
         $produit = Produit::find($id);
         $produit->nom = $request->input('nom');
         $produit->prixUnitaire = $request->input('prixUnitaire');
@@ -133,7 +143,9 @@ class ProduitController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
+    { if(!Gate::allows('isAdmin')){
+        abort(404,"Autorisation interdite");
+    }
         $produit = Produit::find($id);
         $produit->delete();
 
