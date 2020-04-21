@@ -8,6 +8,7 @@
             Vous pouvez trouver ici tous les informations  sur tous nos produits en stock
         </p>
         @include("messages")
+        <div class="table-responsive">
         <table class="table">
             <thead class="thead-light">
             <tr>
@@ -45,6 +46,8 @@
             </tbody>
         </table>
 
+        </div>
+     
     </div>
 </div>
 
