@@ -39,7 +39,7 @@
                     <td>{{$produit->quantiteVendre}}</td>
                     <td>{{$produit->stock}}</td>
                     <td>{{$produit->quantiteVendre * $produit->prixVente}} Fcfa</td>
-                    <td>{{$produit->prixUnitaire - $produit->prixVente}} Fcfa</td>
+                    <td>{{$produit->quantiteVendre * $produit->prixVente - $produit->prixUnitaire}} Fcfa</td>
                  
                   
 
