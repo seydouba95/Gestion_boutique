@@ -71,7 +71,6 @@ class ProduitController extends Controller
         $produit = new Produit();
         $produit->nom = $request->input('nom');
         $produit->prixUnitaire = $request->input('prixUnitaire');
-        $produit->prixVente = $request->input('prixVente');
         $produit->stock = $request->input('stock');
 
       
@@ -133,7 +132,6 @@ class ProduitController extends Controller
         $produit = Produit::find($id);
         $produit->nom = $request->input('nom');
         $produit->prixUnitaire = $request->input('prixUnitaire');
-        $produit->prixVente = $request->input('prixVente');
         $produit->stock = $request->input('stock');
         $produit->save();
         return redirect('/')->with('success','Produit ID:' .$produit->id . " " .'modifié ' . " " .'avec succès');      

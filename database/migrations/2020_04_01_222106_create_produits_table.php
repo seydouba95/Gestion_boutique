@@ -17,7 +17,7 @@ class CreateProduitsTable extends Migration
             $table->increments('id');
             $table->string('nom');
             $table->bigInteger('prixUnitaire');
-            $table->bigInteger('prixVente');
+            $table->bigInteger('prixVente')->nullable();
             $table->integer('stock');
             $table->boolean('isSelected')->default(false);
             $table->integer('quantiteVendre')->nullable();

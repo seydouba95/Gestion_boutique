@@ -26,8 +26,7 @@ class VenteRequest extends FormRequest
         return [
             'nom' => 'bail|required',
             'prixUnitaire' => 'bail|required|numeric',
-            'prixVente' => 'bail|required|numeric',
-            'stock' => 'bail|required|numeric',
+               'stock' => 'bail|required|numeric',
 
 
 

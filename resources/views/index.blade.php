@@ -88,11 +88,7 @@ header('Content-Type: text/html');?>
                                   <input value="{{ old('prixUnitaire') }}"name="prixUnitaire" type="number" min="0"  class="form-control"  placeholder="Entrer le prix  unitaire du produit">
                                   {!! $errors->first('prixUnitaire', '<small  style = "color: red " class="help-block">:message</small>') !!}
                               </div>
-                              <div  class="form-group {!! $errors->has('prixVente') ? 'is-invalid' : ''  !!}">
-                                  <label>Prix de vente</label>
-                                  <input value="{{ old('prixVente') }}" name="prixVente" min="0" type="number" class="form-control"  placeholder="Entrer le prix de vente  du produit">
-                                  {!! $errors->first('prixVente', '<small style = "color: red " class="help-block">:message</small>') !!}
-                              </div>
+                              
                               <div  class="form-group {!! $errors->has('stock') ? 'is-invalid' : '' !!}">
                                   <label>Stock</label>
                                   <input  name="stock" type="number" class="form-control"  min="0" placeholder="Entrer le stock du produit" value="{{ old('stock') }}">
@@ -135,10 +131,7 @@ header('Content-Type: text/html');?>
                               <label>Prix Unitaire</label>
                               <input disabled value="{{$produit->prixUnitaire}}" name="prixUnitaire" type="text" class="form-control"  placeholder="Entrer le prix  unitaire du produit">
                           </div>
-                          <div class="form-group">
-                              <label>Prix de vente</label>
-                              <input disabled value="{{$produit->prixVente}}" name="prixVente" type="text" class="form-control"  placeholder="Entrer le prix de vente  du produit">
-                          </div>
+                        
                           <div class="form-group">
                               <label>Stock</label>
                               <input disabled value="{{$produit->stock}}" name="stock" type="text" class="form-control"  placeholder="Entrer le stock du produit">
@@ -178,10 +171,7 @@ header('Content-Type: text/html');?>
                               <label>Prix Unitaire</label>
                               <input  value="{{$produit->prixUnitaire}}" name="prixUnitaire" type="text" class="form-control"  placeholder="Entrer le prix  unitaire du produit">
                           </div>
-                          <div class="form-group">
-                              <label>Prix de vente</label>
-                              <input  value="{{$produit->prixVente}}" name="prixVente" type="text" class="form-control"  placeholder="Entrer le prix de vente  du produit">
-                          </div>
+                        
                           <div class="form-group">
                               <label>Stock</label>
                               <input value="{{$produit->stock}}" name="stock" type="text" class="form-control"  placeholder="Entrer le stock du produit">

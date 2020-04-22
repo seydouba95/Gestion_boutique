@@ -25,6 +25,11 @@
                         <input  type="number" min=1  name="quantiteVendre"  id="quantiteVendre"  class="form-control" value="{{ old('quantiteVendre') }}">
                         <small class="help-block"></small>
                     </div>
+                    <div class="form-group">                        
+                    <label class="col-form-label">Prix de Vente:</label>
+                        <input  type="number" min=1  name="prixVente"  id="prixVente"  class="form-control" value="{{ old('prixVente') }}">
+                        <small class="help-block"></small>
+                    </div>
 
               
             
