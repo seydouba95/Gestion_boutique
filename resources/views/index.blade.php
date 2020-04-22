@@ -85,17 +85,17 @@ header('Content-Type: text/html');?>
                               </div>
                               <div  class="form-group {!! $errors->has('prixUnitaire') ? 'is-invalid' : '' !!}">
                                   <label>Prix Unitaire</label>
-                                  <input value="{{ old('prixUnitaire') }}"name="prixUnitaire" type="text"  class="form-control"  placeholder="Entrer le prix  unitaire du produit">
+                                  <input value="{{ old('prixUnitaire') }}"name="prixUnitaire" type="number"  class="form-control"  placeholder="Entrer le prix  unitaire du produit">
                                   {!! $errors->first('prixUnitaire', '<small  style = "color: red " class="help-block">:message</small>') !!}
                               </div>
                               <div  class="form-group {!! $errors->has('prixVente') ? 'is-invalid' : ''  !!}">
                                   <label>Prix de vente</label>
-                                  <input value="{{ old('prixVente') }}" name="prixVente" type="text" class="form-control"  placeholder="Entrer le prix de vente  du produit">
+                                  <input value="{{ old('prixVente') }}" name="prixVente" type="number" class="form-control"  placeholder="Entrer le prix de vente  du produit">
                                   {!! $errors->first('prixVente', '<small style = "color: red " class="help-block">:message</small>') !!}
                               </div>
                               <div  class="form-group {!! $errors->has('stock') ? 'is-invalid' : '' !!}">
                                   <label>Stock</label>
-                                  <input  name="stock" type="text" class="form-control"  placeholder="Entrer le stock du produit" value="{{ old('stock') }}">
+                                  <input  name="stock" type="number" class="form-control"  placeholder="Entrer le stock du produit" value="{{ old('stock') }}">
                                   {!! $errors->first('stock', '<small style = "color: red " class="help-block">:message</small>') !!}
                               </div>
 

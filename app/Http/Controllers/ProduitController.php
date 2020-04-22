@@ -54,6 +54,9 @@ class ProduitController extends Controller
         $produits = Produit::where('stock','>',0)->get();
         return view('index',['produits'=>$produits,'layout'=>'create']);
 
+
+
+
     }
 
     /**
