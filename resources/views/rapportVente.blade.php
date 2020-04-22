@@ -19,7 +19,7 @@
                 <th scope="col">Quantité Vendu</th>
                 <th scope="col">Stock restant</th>
                 <th scope="col">Total De Vente</th>
-                <th scope="col">Chiffre D'affaires</th>
+                <th scope="col">Bénéfices</th>
              
                
 
