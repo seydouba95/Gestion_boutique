@@ -35,26 +35,28 @@
             </thead>
             </thead>
 
-            <tfoot>
+            <tfoot >
           <tr>
           
-            <td style="color:red" colspan="6"><strong>Total :</strong></td>
+            <td   style="color:red" colspan="6"><strong>Total :</strong></td>
             <td  style="color:green">
            
            <?php
              $priceTotal = 0;
+             
             foreach($produits as $produit){
               
                 $price = $produit->quantiteVendre * $produit->prixVente;
                 $priceTotal = $priceTotal + $price;
                
             }
-            echo ($priceTotal . " "  . "FRANCS CFA");
-                
-                 
+             
+            echo ($priceTotal . " "  . "FCFA");
+            
             
 
            ?>
+           
          
           
             </td>
@@ -68,7 +70,8 @@
                 $priceTotal = $priceTotal + $price;
                
             }
-            echo ($priceTotal . " "  . "FRANCS CFA");
+          
+            echo ($priceTotal . " "  . "FCFA");
                 
                  
             
@@ -89,12 +92,12 @@
 
                     <td>{{$produit->id}}</td>
                     <td>{{$produit->nom}}</td>
-                    <td>{{$produit->prixUnitaire}} <strong>FRANCS CFA </strong></td>
-                    <td>{{$produit->prixVente}}  <strong>FRANCS CFA </strong></td>
+                    <td>{{$produit->prixUnitaire}} <strong>FCFA </strong></td>
+                    <td>{{$produit->prixVente}}  <strong>FCFA </strong></td>
                     <td>{{$produit->quantiteVendre}}</td>
                     <td>{{$produit->stock}}</td>
-                    <td>{{$produit->quantiteVendre * $produit->prixVente}}  <strong>FRANCS CFA </strong></td>
-                    <td>{{$produit->quantiteVendre * $produit->prixVente - $produit->prixUnitaire}}  <strong>FRANCS CFA </strong></td>
+                    <td>{{$produit->quantiteVendre * $produit->prixVente}}  <strong>FCFA </strong></td>
+                    <td>{{$produit->quantiteVendre * $produit->prixVente - $produit->prixUnitaire}}  <strong>FCFA </strong></td>
                  
                   
 

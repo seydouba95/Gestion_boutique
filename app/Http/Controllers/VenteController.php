@@ -23,9 +23,11 @@ class VenteController extends Controller
       $quantiteVendre = $_POST['quantiteVendre'];
       $vendre=$_POST['prixVente'];
 
-        Produit::where('id',$id)->update(['prixVente'=>$vendre,'stock'=> $stock,'isSelected'=>$isSlected,'quantiteVendre'=>$quantiteVendre]);
-        
-        if($_POST['quantiteVendre'] >1 )
+        Produit::where('id',$id)->insert(['prixVente'=>$vendre,'stock'=> $stock,'isSelected'=>$isSlected,'quantiteVendre'=>$quantiteVendre]);
+        // Produit::where('id',$id)->insert(['prixUnitaire'=>$prixUnitaire, 'nom'=>$nom,'prixVente'=>$vendre,'stock'=> $stock,'isSelected'=>$isSlected,'quantiteVendre'=>$quantiteVendre]);
+
+        //affichage avec ou sans s
+        if($_POST['quantiteVendre'] > 1 )
         return redirect('/')->with('success',  $_POST['quantiteVendre'] . " " .  'Produits ' .$produit->nom . " " .'vendus' . " " . 'avec succès');      
          else
          return redirect('/')->with('success',  $_POST['quantiteVendre'] . " " .  'Produit ' .$produit->nom . " " .'vendu' . " " . 'avec succès');      
