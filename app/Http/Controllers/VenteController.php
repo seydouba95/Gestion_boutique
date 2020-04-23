@@ -34,10 +34,7 @@ class VenteController extends Controller
     
     else
     return redirect('/')->with('success',' ce  stock du Produit ' .$produit->nom . " " .'n\'est pas disponible ' . " ");      
-   
+    }
+
     
-       
-  
-   }
-  
 }

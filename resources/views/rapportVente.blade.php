@@ -1,5 +1,11 @@
 
+  <style>
+     
 
+        tfoot {
+          font-weight: bold;
+        }
+    </style>
 <div class="card mb-3">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUs4AMlgLKe0uNk0TnLbYYTBHk7kqvocu0mj1-j6Mqu7n5GyZR&usqp=CAU" class="card-img-top" alt="..." >
     <div class="card-body">
@@ -15,10 +21,10 @@
                 <th scope="col">ID</th>
                 <th scope="col">Nom </th>
                 <th scope="col">Prix Unitaire</th>
-                <th scope="col">Prix De  Vente</th>
+                <th scope="col">Prix Vente</th>
                 <th scope="col">Quantité Vendu</th>
                 <th scope="col">Stock restant</th>
-                <th scope="col">Total De Vente</th>
+                <th scope="col">Total  Vente</th>
                 <th scope="col">Bénéfices</th>
              
                
@@ -27,25 +33,75 @@
 
             </tr>
             </thead>
+            </thead>
+
+            <tfoot>
+          <tr>
+          
+            <td style="color:red" colspan="6"><strong>Total :</strong></td>
+            <td  style="color:green">
+           
+           <?php
+             $priceTotal = 0;
+            foreach($produits as $produit){
+              
+                $price = $produit->quantiteVendre * $produit->prixVente;
+                $priceTotal = $priceTotal + $price;
+               
+            }
+            echo ($priceTotal . " "  . "FRANCS CFA");
+                
+                 
+            
+
+           ?>
+         
+          
+            </td>
+            <td  style="color:blue">
+           
+           <?php
+             $priceTotal = 0;
+            foreach($produits as $produit){
+              
+                $price = $produit->quantiteVendre * $produit->prixVente - $produit->prixUnitaire;
+                $priceTotal = $priceTotal + $price;
+               
+            }
+            echo ($priceTotal . " "  . "FRANCS CFA");
+                
+                 
+            
+
+           ?>
+         
+          
+            </td>
+          </tr>
+          
+        </tfoot>
+
             <tbody>
 
             @foreach($produits as $produit)
+          
                 <tr>
 
                     <td>{{$produit->id}}</td>
                     <td>{{$produit->nom}}</td>
-                    <td>{{$produit->prixUnitaire}} Fcfa</td>
-                    <td>{{$produit->prixVente}} Fcfa</td>
+                    <td>{{$produit->prixUnitaire}} <strong>FRANCS CFA </strong></td>
+                    <td>{{$produit->prixVente}}  <strong>FRANCS CFA </strong></td>
                     <td>{{$produit->quantiteVendre}}</td>
                     <td>{{$produit->stock}}</td>
-                    <td>{{$produit->quantiteVendre * $produit->prixVente}} Fcfa</td>
-                    <td>{{$produit->quantiteVendre * $produit->prixVente - $produit->prixUnitaire}} Fcfa</td>
+                    <td>{{$produit->quantiteVendre * $produit->prixVente}}  <strong>FRANCS CFA </strong></td>
+                    <td>{{$produit->quantiteVendre * $produit->prixVente - $produit->prixUnitaire}}  <strong>FRANCS CFA </strong></td>
                  
                   
 
                 </tr>
             @endforeach
             </tbody>
+          
         </table>
 
         
