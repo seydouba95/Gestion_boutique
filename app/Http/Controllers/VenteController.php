@@ -22,8 +22,10 @@ class VenteController extends Controller
       $isSlected = $produit->isSelected = true;
       $quantiteVendre = $_POST['quantiteVendre'];
       $vendre=$_POST['prixVente'];
+      $nom=$produit->nom;
+      $prixUnitaire=$produit->prixUnitaire;
 
-        Produit::where('id',$id)->insert(['prixVente'=>$vendre,'stock'=> $stock,'isSelected'=>$isSlected,'quantiteVendre'=>$quantiteVendre]);
+        Produit::where('id',$id)->update(['prixVente'=>$vendre,'stock'=> $stock,'isSelected'=>$isSlected,'quantiteVendre'=>$quantiteVendre]);
         // Produit::where('id',$id)->insert(['prixUnitaire'=>$prixUnitaire, 'nom'=>$nom,'prixVente'=>$vendre,'stock'=> $stock,'isSelected'=>$isSlected,'quantiteVendre'=>$quantiteVendre]);
 
         //affichage avec ou sans s
