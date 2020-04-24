@@ -22,7 +22,7 @@
 
 
 </head>
-<body style = "background-image: url('https://cdn.pixabay.com/photo/2017/07/08/10/57/monochrome-2484055_960_720.jpg')">
+<body style = "background-image: url('https://pbs.twimg.com/media/CwYS3vwWQAk-flt.jpg')">
 
     <div id="app">
     
