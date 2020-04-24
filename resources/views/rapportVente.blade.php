@@ -38,8 +38,8 @@
             <tfoot >
           <tr>
           
-            <td   style="color:red" colspan="6"><strong>Total :</strong></td>
-            <td  style="color:green">
+            <td   style="color:black" colspan="6"><strong>Total :</strong></td>
+            <td  style="color:black">
            
            <?php
              $priceTotal = 0;
@@ -60,7 +60,7 @@
          
           
             </td>
-            <td  style="color:blue">
+            <td  style="color:black">
            
            <?php
              $priceTotal = 0;
