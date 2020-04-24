@@ -7,13 +7,14 @@ header('Content-Type: text/html');?>
 @extends('layouts.app')
 
 @section('content')
+<br><br><br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
         <br><br>
             <div class="card">
           
-                <div  class="navbar  navbar-light bg-primary text-white">  {{ __('Register') }}</div>
+                <div style="background:#00c9b7 !important" class="navbar  navbar-light  text-black">  {{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

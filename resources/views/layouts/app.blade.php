@@ -22,12 +22,12 @@
 
 
 </head>
-<body style = "background-image: url('https://1m21dr37nopl27e0ms3nhx23-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/shutterstock_638631976.jpg')">
+<body style = "background-image: url('https://cdn.pixabay.com/photo/2017/07/08/10/57/monochrome-2484055_960_720.jpg')">
 
     <div id="app">
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <a class="navbar-brand" href="{{url('/')}}">Foutanke Shop Authentification</a>
+    <nav style="background:#00c9b7 !important" class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand text-black" href="{{url('/')}}">Foutanke Shop Authentification</a>
             <div class="container">
              
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,11 +42,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item active">
-                                <a class="nav-link text-white" href="{{ route('login') }}" >{{ __('Login') }} </a>
+                                <a class="nav-link text-black" href="{{ route('login') }}" >{{ __('Login') }} </a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item active">
-                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-black" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
