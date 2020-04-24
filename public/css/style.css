@@ -24,7 +24,7 @@
     color: black !important;
 }
 .navbar-nav > a {
-    color: #fff !important;
+    color: red !important;
 }
 .navbar-nav > a:hover {
     text-decoration: underline;

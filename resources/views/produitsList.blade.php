@@ -1,7 +1,7 @@
 
 
 <div class="card mb-3 ">
-    <img src="https://previews.123rf.com/images/123vector/123vector1406/123vector140600184/29431006-illustration-de-disponible-ic%C3%B4ne-du-produit-sur-fond-blanc.jpg" class="card-img-top" alt="..." >
+    <img src="" class="card-img-top" alt="..." >
     <div class="card-body">
         <h5 class="card-title">Liste des produits</h5>
         <p class="card-text">
