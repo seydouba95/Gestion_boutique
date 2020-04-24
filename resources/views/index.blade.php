@@ -79,7 +79,7 @@ header('Content-Type: text/html');?>
                               @csrf
                               <div class="form-group {!! $errors->has('nom') ? 'is-invalid' : '' !!}">
                                   <label>Nom</label>
-                                  <input  name="nom" id="nom" type="text" class="form-control"  placeholder="Entrer le nom du produit" value="{{ old('nom') }}">
+                                  <input  name="nom"  type="text" class="form-control"  placeholder="Entrer le nom du produit" value="{{ old('nom') }}">
                                   {!! $errors->first('nom', '<small  style = "color: red "  class="help-block">:message</small>') !!}
                               
                               </div>

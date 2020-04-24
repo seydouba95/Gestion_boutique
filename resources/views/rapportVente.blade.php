@@ -7,7 +7,7 @@
         }
     </style>
 <div class="card mb-3">
-<img src="https://lh3.googleusercontent.com/proxy/8AaJAKVIykY0wbEV3hVhgEtZsSuK7JR1ML2H0GSoeKJp2s4yxVzy3JYhLucgSEbccYEq8g4fDMptSmsTzbT7TPwHVSSzlDW1dQMypWvbCSpfX0e1uXSovFxXI76O6mUj5x0C4XFPMKaWESEB2gpArzI8hGrda_IouQI0yFbtBN6du-_B7P3js6X6" class="card-img-top" alt="..." >
+<img src="https://img.chefdentreprise.com/Img/BREVE/2014/10/246254/Bilan-comptable-quelles-informations-retirer--F.jpg" class="card-img-top" alt="..." >
     <div class="card-body">
         <h5 class="card-title">Liste des produits <strong>vendus</strong></h5>
         <p class="card-text">
