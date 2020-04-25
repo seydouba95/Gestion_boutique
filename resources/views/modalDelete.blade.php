@@ -1,4 +1,4 @@
-<a  type="button" class="btn btn-sm btn-danger" data-toggle="modal" href="#" data-target="#delete{{$produit->id}}">Delete</a>
+<a  type="button" style="margin:3px" class="btn btn-sm-2 btn-danger" data-toggle="modal" href="#" data-target="#delete{{$produit->id}}">Delete</a>
 
 
 <div class="modal"   id="delete{{$produit->id}}" tabindex="-1" role="dialog" aria-labelledby="MyModalLabel" aria-hidden="true">

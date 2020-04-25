@@ -1,7 +1,8 @@
 
 
 <div class="card mb-3 ">
-    <img src="" class="card-img-top" alt="..." >
+    <br><br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ66I-5W3XAFBYbTW3Bs5_MoOV__BFGEuJsWJsmLV5LUmI1a9K2&usqp=CAU" class="card-img-top"   style="height:280px"  alt="..." >
     <div class="card-body">
         <h5 class="card-title">Liste des produits</h5>
         <p class="card-text">
@@ -33,8 +34,8 @@
 
                     <td>
                         @can('isAdmin')
-                        <a href="{{url('/show/'.$produit->id)}}" class="btn btn-sm btn-info">Detail</a>
-                        <a href="{{url('/edit/'.$produit->id)}}" class="btn btn-sm btn-warning">Editer</a>
+                        <a href="{{url('/show/'.$produit->id)}}"  style="margin:3px"  class="btn btn-info">Detail</a>
+                        <a href="{{url('/edit/'.$produit->id)}}"  style="margin:3px"  class="btn  btn-warning">Editer</a>
                         @include('modalDelete')
                        @endcan
                         @include('venteProduit')

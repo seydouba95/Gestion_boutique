@@ -14,8 +14,8 @@
 .bg-light {
 
     background: #00c9b7 !important;
-    -webkit-box-shadow: 5px 9px 43px 1px rgba(0,0,0,0.16);
-    box-shadow: 50px 9px 43px 1px rgba(0,0,0,0.16);
+    -webkit-box-shadow: 5px 9px 43px 1px rgba(0,0,0,0.0);
+    box-shadow: 50px 9px 43px 1px rgba(0,0,0,0.0);
     position: sticky;
     top: 0px;
     z-index: 10;
@@ -24,7 +24,7 @@
     color: black !important;
 }
 .navbar-nav > a {
-    color: red !important;
+    color: #fff !important;
 }
 .navbar-nav > a:hover {
     text-decoration: underline;
@@ -39,7 +39,7 @@ body {
 }
 .card-body {
     border : none !important;
-    border-bottom: 1px solid #00c9b7 !important;
+  
 }
 
 .table .thead-light th {
