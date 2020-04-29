@@ -37,7 +37,7 @@ class ProduitController extends Controller
     public function index()
     {
 
-        $produits = Produit::where('stock','>',0)->get();
+        $produits = Produit::where('stock','>',0)->paginate(3);
         return view('index',['produits'=>$produits,'layout'=>'index']);
     }
 
@@ -51,7 +51,7 @@ class ProduitController extends Controller
            if(!Gate::allows('isAdmin')){
                abort(404,"Autorisation interdite");
            }
-        $produits = Produit::where('stock','>',0)->get();
+        $produits = Produit::where('stock','>',0)->paginate(2);
         return view('index',['produits'=>$produits,'layout'=>'create']);
 
 

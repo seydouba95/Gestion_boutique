@@ -7,18 +7,30 @@
         <h5 class="card-title">Liste des produits</h5>
         <p class="card-text">
             Vous pouvez trouver ici tous les informations  sur tous nos produits en stock
+         
+            
         </p>
+        <form  style="float:right" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            
+         
+    </form>
+    
+        
+  
         @include("messages")
         <div class="table-responsive">
-
-        <table class="table">
+        &nbsp;
+        <table class="table table-bordered table-dark">
             <thead class="thead-light">
+    
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nom</th>
                 <th scope="col">Prix Unitaire</th>
                 <th scope="col">stock</th>
-                <th scope="col">Operations</th>
+                <th style="text-decoration:center" scope="col">Actions</th>
 
             </tr>
             </thead>
@@ -47,8 +59,12 @@
             @endforeach
             </tbody>
         </table>
-
+      
+                {{$produits->render()}}
+         
         </div>
+     
+
       
     </div>
 </div>
