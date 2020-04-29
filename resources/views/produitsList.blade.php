@@ -12,7 +12,7 @@
         </p>
      
         <form action="" style="float:right" class="form-inline my-1 my-lg-0">
-      <input class="form-control mr-sm-1" type="text" name="q" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm" type="text" name="q" placeholder="Search" aria-label="Search">
         
  <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             
