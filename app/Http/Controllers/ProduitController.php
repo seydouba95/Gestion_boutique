@@ -18,6 +18,25 @@ class ProduitController extends Controller
     {
         return view('home');
     }
+  /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     *  @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function search()
+    {
+        $produit = request()->input('produit');
+       $produits= Produit::where('nom','like',"%$produit%")
+        ->orwhere('id','like',"%$produit%")
+        ->orwhere('prixUnitaire','like',"%$produit%")
+        ->orwhere('stock','like',"%$produit%")
+        ->paginate(2);
+        return view('index',['produits'=>$produits,'layout'=>'index']);
+
+    }
+
+
        /**
      * Display a listing of the resource.
      *
