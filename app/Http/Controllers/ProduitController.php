@@ -128,7 +128,7 @@ class ProduitController extends Controller
         }
         //montrer un produit par son id
         $produit = Produit::find($id);
-        $produits = Produit::all();
+        $produits = Produit::paginate(2);
         return view('index',['produits'=>$produits,'produit'=>$produit,'layout'=>'show']);
 
     }
@@ -145,7 +145,7 @@ class ProduitController extends Controller
             abort(404,"Autorisation interdite");
         }
         $produit = Produit::find($id);
-        $produits = Produit::where('stock','>',0)->get();
+        $produits = Produit::where('stock','>',0)->paginate(2);
         return view('index',['produits'=>$produits,'produit'=>$produit,'layout'=>'edit']);
     }
 

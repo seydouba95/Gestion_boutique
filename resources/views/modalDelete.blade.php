@@ -15,7 +15,7 @@
 
                     <div class="form-group">
                        <p class="text-center">
-                         Etes-vous sur de vouloir supprimer ceci ?
+                       êtes-vous sûr de vouloir supprimer ce produit ?
                        </p>
                     </div>
 
