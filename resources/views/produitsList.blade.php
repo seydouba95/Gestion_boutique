@@ -13,7 +13,7 @@
      
         <form id="form" action="{{url('/search')}}" method="get" style="float:right" class="form-inline my-1 my-lg-0">
  
-      <input class="form-control mr-sm" type="text"  id="produit" name="produit" placeholder="Search...." aria-label="Search">
+      <input   class="form-control mr-sm" type="text"  id="produit" name="produit" placeholder="Search...." aria-label="Search">
         
        
  <button   id="button" class="btn btn-outline-info" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
@@ -30,7 +30,7 @@
         @include("messages")
         <div class="table-responsive">
         &nbsp;
-        <table class="table table-bordered table-dark">
+        <table class="table table-bordered table-light">
             <thead class="thead-light">
     
             <tr>
