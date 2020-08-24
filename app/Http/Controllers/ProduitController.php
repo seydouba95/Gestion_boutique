@@ -26,20 +26,22 @@ class ProduitController extends Controller
      */
     public function search()
     {            $produit = request()->input('produit');
+        
         if($produit == ""){
             return redirect('/');        
 
-        }else{
+        }else if(isset($produit)) {
+    
 
             $produits= Produit::where('nom','like',"%$produit%")
              ->orwhere('id','like',"%$produit%")
              ->orwhere('prixUnitaire','like',"%$produit%")
              ->orwhere('stock','like',"%$produit%")
              ->paginate(2);
-       
-     
+             
             return view('index',['produits'=>$produits,'layout'=>'index']);  
         }
+        
       
            
       
