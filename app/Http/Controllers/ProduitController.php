@@ -6,6 +6,7 @@ use App\Produit;
 use Illuminate\Http\Request;
 use App\Http\Requests\VenteRequest;
 use App\Vente;
+use Illuminate\Support\Facades\File;
 use  Gate;
 class ProduitController extends Controller
 {
@@ -107,6 +108,13 @@ class ProduitController extends Controller
         $produit->prixUnitaire = $request->input('prixUnitaire');
         $produit->stock = $request->input('stock');
 
+        if($request->file('image')){
+            $file= $request->file('image');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('Image'), $filename);
+            $produit['image']= $filename;
+        }
+
       
         $produit->save();
       
@@ -167,7 +175,22 @@ class ProduitController extends Controller
         $produit->nom = $request->input('nom');
         $produit->prixUnitaire = $request->input('prixUnitaire');
         $produit->stock = $request->input('stock');
-        $produit->save();
+      
+        if($request->hasfile('image')){
+
+           $destination = 'Image/'.$produit->image;  
+           if (File::exists($destination)) {
+               File::delete($destination);
+           }
+           $file = $request->file('image');
+           $extension = $file->getClientOriginalExtension();
+           $filename =  date('YmdHi').'.'.$extension;
+           $file->move('Image',$filename);
+           $produit->image = $filename;
+        }
+
+
+        $produit->update();
         return redirect('/')->with('success','Produit ID:' .$produit->id . " " .'modifié ' . " " .'avec succès');      
     }
 

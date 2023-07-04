@@ -1,6 +1,7 @@
 
-<a type="button"   style="margin:3px"  class="btn  btn-success" href="#" data-toggle="modal" data-target="#exampleModal{{$produit->id}}">Vendre</a>
+<!--<a type="button"   style="margin:3px"  class="btn  btn-success" href="#" data-toggle="modal" data-target="#exampleModal"">Vendre</a>-->
 
+<div class="product-button"><a href="#" data-toggle="modal" data-target="#exampleModal{{$produit->id}}"><i class="fa fa-shopping-cart "></i></a></div>
 
 <div class="modal" id="exampleModal{{$produit->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

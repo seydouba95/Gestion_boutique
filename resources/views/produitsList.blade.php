@@ -2,7 +2,7 @@
 
 <div class="card mb-3 ">
     <br><br>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ66I-5W3XAFBYbTW3Bs5_MoOV__BFGEuJsWJsmLV5LUmI1a9K2&usqp=CAU" class="card-img-top"   style="height:280px"  alt="..." >
+   <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ66I-5W3XAFBYbTW3Bs5_MoOV__BFGEuJsWJsmLV5LUmI1a9K2&usqp=CAU" class="card-img-top"   style="height:280px"  alt="..." >--> 
     <div class="card-body">
         <h5 class="card-title">Liste des produits</h5>
         <p class="card-text">
@@ -16,8 +16,8 @@
       <input   class="form-control mr-sm" type="text"  id="produit" name="produit" placeholder="Search...." aria-label="Search">
         
        
- <button   id="button" class="btn btn-outline-info" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
-</button>
+    <button   id="button" class="btn btn-outline-info" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+    </button>
 
      
 
@@ -27,47 +27,42 @@
   
 
   
-        @include("messages")
         <div class="table-responsive">
         &nbsp;
-        <table class="table table-bordered table-light">
-            <thead class="thead-light">
-    
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Prix Unitaire</th>
-                <th scope="col">stock</th>
-                <th style="text-decoration:center" scope="col">Actions</th>
+     
 
-            </tr>
-            </thead>
-            <tbody>
-
-            @foreach($produits as $produit)
-                <tr>
-
-                    <td>{{$produit->id}}</td>
-                    <td>{{$produit->nom}}</td>
-                    <td>{{$produit->prixUnitaire}} Fcfa</td>
-                    <td>{{$produit->stock}}</td>
-
-                    <td>
-                        @can('isAdmin')
-                        <a href="{{url('/show/'.$produit->id)}}"  style="margin:3px"  class="btn btn-info">Detail</a>
-                        <a href="{{url('/edit/'.$produit->id)}}"  style="margin:3px"  class="btn  btn-warning">Editer</a>
-                        @include('modalDelete')
-                       @endcan
-                        @include('venteProduit')
-
-
-                    </td>
-
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
-      
+        <div class="container">
+           
+        
+            <div class="row">
+                <!-- Product-->
+                @foreach($produits as $produit)
+                <div class="col-lg-4 col-sm-6 mb-30">
+                    <div class="product-card mx-auto mb-3">
+                        <div class="product-head d-flex justify-content-between align-items-center"><span class="badge badge-success">{{$produit->stock}}</span>
+                            
+                        </div>
+                        <a class="product-thumb" href="{{url('/show/'.$produit->id)}}"><img src="/Image/{{ $produit->image }}" alt="Product Thumbnail"></a>
+                        <div class="product-card-body">
+                            <h5 class="product-title"><a href="{{url('/show/'.$produit->id)}}">{{$produit->nom}}</a></h5><span class="product-price">
+                                {{$produit->prixUnitaire}} Fcfa</span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="product-buttons">
+                                <div class="product-button"><a href="{{url('/edit/'.$produit->id)}}" ><i class="fa fa-edit"></i></a></div>
+                                @include('venteProduit')                                
+                                @include('modalDelete')
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+                @endforeach
+            </div>
+           
+        </div>
+   
+        <br>
                 {{$produits->render()}}
          
         </div>
@@ -76,7 +71,6 @@
       
     </div>
 </div>
-
 
 
 
